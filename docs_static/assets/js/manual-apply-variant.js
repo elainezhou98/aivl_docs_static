@@ -12,8 +12,13 @@
   var presets = {
     /** 版本 1：有 AI、有平台市场、无市场分析/选品对比/仪表盘 */
     full: {},
-    /** 版本 2（与 full 配置相同，命名给实验分组用） */
-    "ai-market": {},
+    /** 版本 2：有 AI、有平台市场（进货中心双图使用 ai-market 指定配图） */
+    "ai-market": {
+      imageProcurementMainWithIntelliselectPlatformMarket:
+        "assets/images/进货中心_AI组_平台市场.png",
+      imageProcurementCategoryWithIntelliselectPlatformMarket:
+        "assets/images/进货中心_品类筛选_AI组_平台市场.png",
+    },
     /** 版本 3：有 AI、无平台市场、无市场分析/选品对比/仪表盘 */
     "ai-no-market": { platformMarket: false },
     /** 版本 4：无 AI、无平台市场、有市场分析/选品对比/仪表盘 */

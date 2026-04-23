@@ -50,8 +50,8 @@ window.MANUAL_CONFIG = {
   controlNavTaskHelp: true,
   balanceInitial: 150,
   balancePerListing: 50,
-  experimentRounds: 5,
-  roundTimeMinutes: 20,
+  experimentRounds: 8,
+  roundTimeMinutes: 15,
   imageControlCenterWithoutPlatformMarket:
     "assets/images/中控中心_无平台市场组.png",
   /** 有平台市场时中控配图：绩效表现 */
