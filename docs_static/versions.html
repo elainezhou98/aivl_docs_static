@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GLOTRA 操作指南 · 版本入口</title>
+    <link rel="stylesheet" href="assets/css/manual.css" />
+    <style>
+      .versions-wrap {
+        max-width: 40rem;
+        margin: 2.5rem auto;
+        padding: 0 1.5rem 3rem;
+      }
+      .versions-wrap h1 {
+        margin: 0 0 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      .versions-wrap .versions-lead {
+        margin: 0 0 1.5rem;
+        font-size: 0.9rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .versions-wrap .versions-lead code {
+        font-size: 0.8rem;
+        padding: 0.1rem 0.35rem;
+        border-radius: 4px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+      }
+      .versions-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .versions-list li {
+        margin-bottom: 0.75rem;
+        padding: 1rem 1.15rem;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+      }
+      .versions-list a {
+        font-weight: 600;
+        color: var(--accent);
+        text-decoration: none;
+      }
+      .versions-list a:hover {
+        text-decoration: underline;
+      }
+      .versions-list .desc {
+        display: block;
+        margin-top: 0.4rem;
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="versions-wrap">
+      <h1>GLOTRA 操作指南 · 版本入口</h1>
+      <p class="versions-lead">
+        下列为<strong>同一套页面</strong>的多个 HTML 文件，共用 <code>assets/</code> 与
+        <code>manual-config.js</code>；通过根元素 <code>data-manual-variant</code> 区分
+        <code>includeAI</code>、<code>platformMarket</code>、<code>procurementAnalyticsTools</code>
+        （进货中心 · 市场分析 / 选品对比 / 仪表盘及下属小节）。打开任一项即可在浏览器中直接预览对应版本。
+      </p>
+      <ul class="versions-list">
+        <li>
+          <a href="full.html">full.html</a>
+          <span class="desc">版本 1（<code>full</code>）：有 AI、有平台市场；<strong>无</strong>市场分析 / 选品对比 / 仪表盘。</span>
+        </li>
+        <li>
+          <a href="ai-market.html">ai-market.html</a>
+          <span class="desc">版本 2（<code>ai-market</code>）：有 AI、有平台市场；<strong>无</strong>市场分析 / 选品对比 / 仪表盘。</span>
+        </li>
+        <li>
+          <a href="ai-no-market.html">ai-no-market.html</a>
+          <span class="desc">版本 3（<code>ai-no-market</code>）：有 AI、无平台市场；<strong>无</strong>市场分析 / 选品对比 / 仪表盘。</span>
+        </li>
+        <li>
+          <a href="no-ai-no-market.html">no-ai-no-market.html</a>
+          <span class="desc">版本 4（<code>no-ai-no-market</code>）：无 AI、无平台市场；<strong>有</strong>市场分析 / 选品对比 / 仪表盘。</span>
+        </li>
+        <li>
+          <a href="no-ai-market.html">no-ai-market.html</a>
+          <span class="desc">版本 5（<code>no-ai-market</code>）：无 AI、有平台市场；<strong>有</strong>市场分析 / 选品对比 / 仪表盘。</span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

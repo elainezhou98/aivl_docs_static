@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-manual-variant="no-ai-no-market">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GLOTRA 平台操作指南（无 AI · 无平台市场）</title>
+    <link rel="stylesheet" href="assets/css/manual.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="nav-wrap" id="navWrap" aria-label="页面导航">
+        <div class="nav-brand">
+          GLOTRA 操作指南
+          <small>无 AI · 无平台市场</small>
+        </div>
+        <nav aria-label="页面目录">
+          <p class="nav-toc-label">目录</p>
+          <ul class="nav-list" id="navList"></ul>
+          <noscript>
+            <p class="nav-noscript">请启用 JavaScript，侧栏目录将按正文标题自动生成。</p>
+          </noscript>
+        </nav>
+      </aside>
+
+      <main>
+        <header class="hero" id="top">
+          <h1>GLOTRA 平台操作指南</h1>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#control">从中控开始</a>
+            <a class="btn btn-ghost" href="#quick">快捷入口</a>
+            <nav class="hero-actions__chips quick-links" aria-label="商品管理快捷入口">
+              <a class="quick-link" href="#listing-edit">1. 上架商品</a>
+              <a class="quick-link" href="#product-maintain">2. 在「我的店铺」中维护商品信息</a>
+              <a class="quick-link" href="#product-delist">3. 下架商品</a>
+              <a class="quick-link" href="#product-relist">4. 已下架商品恢复上架</a>
+            </nav>
+          </div>
+          <div class="quick-groups" id="quick">
+            <div class="quick-group quick-group--catalog">
+              <h3>按功能分类</h3>
+              <div class="quick-catalog quick-catalog--three" role="navigation" aria-label="按功能分类">
+                <div class="quick-catalog__cluster">
+                  <p class="quick-catalog__label">基础板块</p>
+                  <ul class="quick-catalog__list">
+                    <li><a class="quick-catalog__link" href="#control">中控中心</a></li>
+                    <li><a class="quick-catalog__link" href="#shop">我的店铺</a></li>
+                  </ul>
+                </div>
+                <div class="quick-catalog__cluster" data-manual="includeAI">
+                  <p class="quick-catalog__label">进货中心</p>
+                  <ul class="quick-catalog__list">
+                    <li><a class="quick-catalog__link" href="#procurement">进货中心</a></li>
+                    <li><a class="quick-catalog__link" href="#intelliselect">进货中心 · Intelliselect</a></li>
+                  </ul>
+                </div>
+                <div class="quick-catalog__cluster" data-manual-not="includeAI">
+                  <p class="quick-catalog__label">进货中心</p>
+                  <ul class="quick-catalog__list">
+                    <li><a class="quick-catalog__link" href="#procurement">进货中心</a></li>
+                    <li><a class="quick-catalog__link" href="#procurement-market-analysis">进货中心 · 市场分析</a></li>
+                    <li><a class="quick-catalog__link" href="#procurement-product-compare">进货中心 · 选品对比</a></li>
+                    <li><a class="quick-catalog__link" href="#procurement-dashboard">进货中心 · 仪表盘</a></li>
+                  </ul>
+                </div>
+                <div class="quick-catalog__cluster" data-manual="platformMarket">
+                  <p class="quick-catalog__label">平台市场</p>
+                  <ul class="quick-catalog__list">
+                    <li><a class="quick-catalog__link" href="#market">平台市场</a></li>
+                    <li><a class="quick-catalog__link" href="#market-stats">平台市场 · 市场汇总</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section id="handbook">
+          <h2>用户手册</h2>
+          <h3>背景</h3>
+          <ul class="compact-items">
+            <li><strong>角色与目标：</strong>你是新入驻 Glotra 泰国站 的中国个体商家。你的核心目标是通过更优选品与经营决策，最大化店铺总收益。</li>
+            <li><strong>平台机制：</strong>平台采用 一件代发（Dropshipping） 模式：顾客下单后由平台直接发货。因此，你无需负责库存与物流，可将精力集中在选品与经营策略上。</li>
+            <li><strong>收益与成本：</strong>平台会按商品销售额向你支付提成。同时，每上架 1 个商品会收取统一的固定运营费（各商品一致）。</li>
+          </ul>
+
+          <h3>任务</h3>
+          <ol class="steps">
+            <li><strong>搭建个人店铺：</strong>进入「我的店铺」，填写店铺名称与店铺描述<span class="manual-required-note">（均必填）</span>。</li>
+            <li><strong>选品与上架：</strong>进入「进货中心」搜索商品。<span data-manual="procurementAnalytics">可使用市场分析、选品对比、仪表盘等工具辅助决策。</span></li>
+            <li><strong>提交本轮决策：</strong>在「中控中心」提交本轮决策；仅提交时店铺内保留商品计入当轮结果。</li>
+            <li><strong>反馈与优化：</strong>每轮结束后先回答简短问卷，并在下一轮根据反馈优化决策。</li>
+          </ol>
+
+          <h3>计分与规则</h3>
+          <ul class="compact-items">
+            <li><strong>每轮资源限制：</strong>每轮初始余额 150 点；每上架 1 个商品消耗 50 点；每轮需上架 3 个商品（少于 3 个会影响分数）。</li>
+            <li><strong>单品绩效得分：</strong>爆品 20 分；高绩效 8 分；中绩效 1 分；低绩效 -3 分；亏损 -8 分。</li>
+            <li><strong>同款分配规则：</strong>若该商品得分为正（20/8/1），该商品分数按当轮选择人数平均分配；若得分为负（-3/-8），不平均分配，每位选择者承担同等负分。</li>
+            <li><strong>最终成绩：</strong>正式测试各轮得分累计之和。</li>
+          </ul>
+
+          <h3>流程与注意事项</h3>
+          <ul class="compact-items">
+            <li>实验共 <span data-manual-value="experimentRounds">5</span> 轮；正式轮次每轮限时 <span data-manual-value="roundTimeMinutes">20</span> 分钟；每轮提交后需回答简短问题，随后进入下一轮。</li>
+            <li>店铺余额不跨轮累积。</li>
+            <li>请独立、一次性完成全部任务，不与他人交流，不借助外部工具，避免中途退出。</li>
+          </ul>
+        </section>
+
+        <!-- 中控 -->
+        <section id="control">
+          <h2>中控中心</h2>
+          <figure class="figure control-center-figure">
+            <img
+              id="manualControlCenterImg"
+              src="assets/images/中控中心_无平台市场组.png"
+              alt="中控中心"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>中控中心</figcaption>
+          </figure>
+
+          <h3 class="control-h3 control-h3--nav">顶部导航栏</h3>
+          <ul class="compact-items">
+            <li data-manual="platformMarket"><strong>平台市场：</strong>进入「平台市场」，查看上一轮所有商家的选品情况。</li>
+            <li><strong>我的店铺：</strong>管理店铺信息与已上架到店铺的商品。</li>
+            <li><strong>进货中心：</strong>进行选品与上架相关操作。</li>
+            <li><strong>中控中心：</strong>返回当前中控界面。</li>
+            <li data-manual="controlNavTaskHelp"><strong>任务与帮助：</strong>查看任务说明和平台使用指南。</li>
+          </ul>
+          <h3 class="control-h3 control-h3--info">基本信息</h3>
+          <ul class="compact-items">
+            <li><strong>用户名：</strong>显示当前账号用户名。</li>
+            <li><strong>余额：</strong>本轮可用的资源点。初始为<span data-manual-value="balanceInitial">150</span>点；每上架 1 件商品扣除<span data-manual-value="balancePerListing">50</span>点；每轮会清算。</li>
+            <li><strong>当前轮次：</strong>当前所处的决策轮次。</li>
+          </ul>
+          <h3 class="control-h3 control-h3--ops">操作中心</h3>
+          <ul class="compact-items">
+            <li><strong>上架记录：</strong>查看历史上架商品信息。</li>
+            <li><strong>提交本轮选品：</strong>提交本轮最终选品决策；提交后不能修改。</li>
+            <li><strong>批量下架：</strong>在操作中心批量选择已上架商品并下架。</li>
+          </ul>
+          <h3 class="control-h3 control-h3--performance">我的选品表现</h3>
+          <ul class="compact-items">
+            <li><strong>我的选品表现：</strong>查看历史轮次选品结果。</li>
+          </ul>
+        </section>
+
+        <!-- 我的店铺 -->
+        <section id="shop">
+          <h2>我的店铺</h2>
+          <figure class="figure">
+            <img src="assets/images/我的店铺.png" alt="我的店铺" loading="lazy" decoding="async" />
+          </figure>
+          <ul class="compact-items">
+            <li><strong>店铺名称：</strong>需设置店铺名称；在后续每一轮中均可调整。</li>
+            <li><strong>店铺描述：</strong>简要描述店铺方向与目标客户（约 30 字）。</li>
+            <li><strong>店铺商品：</strong>按<strong>商品品类</strong><span class="manual-text-red">（可自定义）</span>展示；点击商品可修改详情或下架。</li>
+          </ul>
+        </section>
+
+        <!-- 进货中心 -->
+        <section id="procurement">
+          <h2>进货中心</h2>
+          <div class="procurement-figures">
+            <div id="procurementDual" class="grid-2 procurement-figures__dual">
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    id="manualProcurementImgMain"
+                    class="figure-pair__img"
+                    src="assets/images/进货中心_AI组.png"
+                    alt="进货中心主界面"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">左：进货中心主界面。若此栏无图，请将截图放入 <code>assets/images/</code> 对应文件后刷新。</p>
+                  </div>
+                </div>
+              </figure>
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    id="manualProcurementImgCategory"
+                    class="figure-pair__img"
+                    src="assets/images/进货中心_品类筛选_AI组.png"
+                    alt="品类筛选"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">右：品类筛选。若此栏无图，请将截图放入 <code>assets/images/</code> 对应文件后刷新。</p>
+                  </div>
+                </div>
+              </figure>
+            </div>
+            <figure id="procurementSingle" class="figure" hidden>
+              <img id="manualProcurementImgSingle" src="assets/images/进货中心_无AI_平台市场组.png" alt="进货中心" loading="lazy" decoding="async" />
+            </figure>
+          </div>
+          <div class="section-capabilities">
+            <div class="section-capabilities__line">
+              <span class="section-capabilities__label">功能范围：</span>
+              <p class="section-capabilities__text">在进货中心搜索、筛选、排序并浏览商品；上架编辑与成功提示见「商品管理」中的<strong>上架商品</strong>。</p>
+            </div>
+            <p class="procurement-attention procurement-attention--in-capabilities">进行下一次筛选前需要点击：<strong>重置所有条件</strong>。</p>
+          </div>
+
+          <h3>选品功能</h3>
+          <ul class="compact-items">
+            <li><strong>搜索栏：</strong>输入关键词或商品 ID 查找商品。</li>
+            <li><strong>选择分类：</strong>选择一级类目或一、二级类目；点击「确定」后需点击「筛选」刷新页面。</li>
+            <li><strong>排序与价格：</strong>可设置价格区间，也可按价格、评分等排序。</li>
+            <li><strong>翻页：</strong>浏览更多商品列表。</li>
+          </ul>
+
+          <section id="procurement-market-analysis" data-manual="procurementAnalytics">
+            <h3>进货中心 · 市场分析</h3>
+            <p class="lead">在进货中心查看与市场相关的分析数据与趋势，辅助选品决策。</p>
+            <figure class="figure">
+              <div class="figure-pair__media">
+                <img
+                  class="figure-pair__img"
+                  src="assets/images/进货中心_市场分析.png"
+                  alt="进货中心 · 市场分析"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="figure-pair__text" hidden>
+                  <p class="figure-pair__note">
+                    若此栏无图，请将截图放入 <code>/Users/elaine_pro/Dropbox/Research Projects/1_AIVL_2025/AIVL_Sharing/Experiment materials/code/docs_static/assets/images/进货中心_市场分析.png</code> 后刷新。
+                  </p>
+                </div>
+              </div>
+            </figure>
+          </section>
+
+          <section id="procurement-product-compare" data-manual="procurementAnalytics">
+            <h3>进货中心 · 选品对比</h3>
+            <p class="lead">对比不同候选商品的关键信息，便于筛选与决策。</p>
+            <figure class="figure">
+              <div class="figure-pair__media">
+                <img
+                  class="figure-pair__img"
+                  src="assets/images/进货中心_选品对比.png"
+                  alt="进货中心 · 选品对比"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="figure-pair__text" hidden>
+                  <p class="figure-pair__note">
+                    若此栏无图，请将截图放入 <code>assets/images/进货中心_选品对比.png</code> 后刷新。
+                  </p>
+                </div>
+              </div>
+            </figure>
+          </section>
+
+          <section id="procurement-dashboard" data-manual="procurementAnalytics">
+            <h3>进货中心 · 仪表盘</h3>
+            <figure class="figure">
+              <div class="figure-pair__media">
+                <img
+                  class="figure-pair__img"
+                  src="assets/images/进货中心_仪表盘.png"
+                  alt="进货中心 · 仪表盘"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </figure>
+          <section id="dashboard-market-overview">
+            <h3>仪表盘 · 市场概况</h3>
+            <p class="lead">总览市场行情与关键指标，把握整体选品环境。</p>
+            <div class="grid-2 procurement-figures__dual">
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/进货中心_仪表盘_市场概况1.png"
+                    alt="仪表盘 · 市场概况 1"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </figure>
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/进货中心_仪表盘_市场概况2.png"
+                    alt="仪表盘 · 市场概况 2"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </figure>
+            </div>
+          </section>
+          <section id="dashboard-hot-products">
+            <h3>仪表盘 · 热门产品</h3>
+            <p class="lead">查看当前热门商品与趋势，辅助发现机会品类或单品。</p>
+            <div class="grid-2 procurement-figures__dual">
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/进货中心_仪表盘_热门产品1.png"
+                    alt="仪表盘 · 热门产品 1"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </figure>
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/进货中心_仪表盘_热门产品2.png"
+                    alt="仪表盘 · 热门产品 2"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </figure>
+            </div>
+          </section>
+
+          <section id="dashboard-product-trajectory">
+              <h3>仪表盘 · 单品轨迹</h3>
+              <p class="lead">跟踪指定商品的表现与变化轨迹，支持单品层面的复盘与决策。</p>
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/进货中心_仪表盘_单品轨迹.png"
+                    alt="仪表盘 · 单品轨迹"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">
+                      若此栏无图，请将截图放入 <code>assets/images/进货中心_仪表盘_单品轨迹.png</code> 后刷新。
+                    </p>
+                  </div>
+                </div>
+              </figure>
+            </section>
+          </section>
+
+          <!-- 进货中心下一级：Intelliselect（由 MANUAL_CONFIG.includeAI 控制是否展示） -->
+          <section id="intelliselect" data-manual="includeAI">
+            <h3 class="procurement-intelliselect-title">进货中心 · Intelliselect</h3>
+            <p class="lead">Intelliselect 可提供目标市场选品与市场咨询支持。</p>
+            <div class="procurement-figures">
+              <div class="grid-2 procurement-figures__dual">
+                <figure class="figure">
+                  <div class="figure-pair__media">
+                    <img class="figure-pair__img" src="assets/images/AI对话进入.png" alt="进入 Intelliselect" loading="lazy" decoding="async" />
+                    <div class="figure-pair__text" hidden>
+                      <p class="figure-pair__note">左：进入 Intelliselect。若此栏无图，请将截图放入 <code>assets/images/</code> 对应文件后刷新。</p>
+                    </div>
+                  </div>
+                </figure>
+                <figure class="figure">
+                  <div class="figure-pair__media">
+                    <img class="figure-pair__img" src="assets/images/AI对话界面.png" alt="AI 对话界面" loading="lazy" decoding="async" />
+                    <div class="figure-pair__text" hidden>
+                      <p class="figure-pair__note">右：AI 对话界面。若此栏无图，请将截图放入 <code>assets/images/</code> 对应文件后刷新。</p>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+            </div>
+
+            <h3>可询问的问题类型</h3>
+            <ul class="compact-items">
+              <li><strong>类目推荐：</strong>分析市场潜力，推荐适合切入经营的类目。示例：泰国市场有哪些具备增长空间、适合入驻的类目？</li>
+              <li><strong>类目深问：</strong>针对指定类目，查询市场、竞争、消费需求等详细信息。示例：泰国香薰类目的市场规模、主要竞品和消费偏好是什么？</li>
+              <li><strong>产品推荐：</strong>结合市场需求，推荐适合上架销售的具体产品。示例：适合在泰国线上销售的家居好物有哪些推荐？</li>
+              <li><strong>产品深问：</strong>获取某款产品的卖点、定价、受众、市场表现等详情。示例：1731382176667044836 的产品特点、售价和用户反馈如何？</li>
+              <li><strong>市场咨询：</strong>调研泰国整体市场环境，掌握消费者特征与需求。示例：泰国年轻消费群体的购物偏好和消费习惯是怎样的？</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- 平台市场 -->
+        <section id="market" data-manual="platformMarket">
+          <h2>平台市场</h2>
+          <p class="lead">
+            平台市场展示<strong>上一轮决策中所有商家选择上架的商品集合</strong>，为本轮选品提供市场参考。
+          </p>
+          <figure class="figure market-section-overview">
+            <div class="figure-pair__media market-triple__media">
+              <img
+                class="figure-pair__img"
+                src="assets/images/平台市场.png"
+                alt="平台市场主界面"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption>平台市场主界面</figcaption>
+          </figure>
+          <p class="market-triple-subtitle">查看别人的卖品和店铺</p>
+          <div class="market-triple-stack">
+            <figure class="figure">
+              <div class="figure-pair__media market-triple__media">
+                <img
+                  class="figure-pair__img"
+                  src="assets/images/平台市场_准备具体产品.png"
+                  alt="平台市场"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption>平台市场</figcaption>
+            </figure>
+            <div class="grid-2 market-triple-rest">
+              <figure class="figure">
+                <div class="figure-pair__media market-triple__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/平台市场_具体产品.png"
+                    alt="具体产品"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption>具体产品</figcaption>
+              </figure>
+              <figure class="figure">
+                <div class="figure-pair__media market-triple__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/平台市场_别人店铺.png"
+                    alt="别人店铺"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption>别人店铺</figcaption>
+              </figure>
+            </div>
+          </div>
+          <ul class="steps">
+            <li>点击任意<strong>商品卡片</strong>，进入该商品详情页。</li>
+            <li>详情页显示商品名称、描述、价格、所属类目、标签、评分等信息。</li>
+            <li>在商品详情页点击<strong>售卖该商品的商家名称</strong>，可跳转至该商家店铺页面。</li>
+          </ul>
+
+          <!-- 平台市场下一级：市场汇总 / 榜单 -->
+          <section id="market-stats">
+            <h3 class="market-stats-heading">平台市场 · 市场汇总</h3>
+            <p class="lead market-stats-blurb">
+              市场汇总中显示上一轮中商家在<strong>一级类目</strong>层面的选择情况，以及一级类目下的<strong>二级类目占比分布</strong>。
+            </p>
+            <div class="grid-2 market-stats-images">
+              <figure class="figure">
+                <img
+                  src="assets/images/平台市场_显示市场汇总.png"
+                  alt="显示市场汇总入口"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>显示市场汇总</figcaption>
+              </figure>
+              <figure class="figure">
+                <img
+                  src="assets/images/平台市场_市场汇总.png"
+                  alt="平台市场 · 市场汇总"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>市场汇总</figcaption>
+              </figure>
+            </div>
+          </section>
+        </section>
+
+        <!-- 商品管理 -->
+        <section id="products">
+          <h2>商品管理</h2>
+
+          <section id="listing-edit">
+            <h3>1. 上架商品</h3>
+            <p class="lead">一种方式是在<strong>进货中心</strong>选择新产品，再在商品详情中编辑信息并上架。</p>
+            <div class="grid-3 listing-edit-figures listing-edit-figures--listing">
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/进货中心_AI组_平台市场_1.png"
+                    alt="上架流程 步骤 1"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">
+                      步骤 1。若此栏无图，请将截图放入
+                      <code>assets/images/进货中心_AI组_平台市场_1.png</code> 后刷新。
+                    </p>
+                  </div>
+                </div>
+                <figcaption>步骤 1</figcaption>
+              </figure>
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/进货中心_AI组_平台市场_2.png"
+                    alt="上架流程 步骤 2"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">
+                      步骤 2。若此栏无图，请将截图放入
+                      <code>assets/images/进货中心_AI组_平台市场_2.png</code> 后刷新。
+                    </p>
+                  </div>
+                </div>
+                <figcaption>步骤 2</figcaption>
+              </figure>
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/进货中心_AI组_平台市场_3.png"
+                    alt="上架流程 步骤 3"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">
+                      步骤 3。若此栏无图，请将截图放入
+                      <code>assets/images/进货中心_AI组_平台市场_3.png</code> 后刷新。
+                    </p>
+                  </div>
+                </div>
+                <figcaption>步骤 3</figcaption>
+              </figure>
+            </div>
+            <p class="lead">为待上架商品编辑展示信息；保存后即上架到店铺。</p>
+
+            <ul class="compact-items compact-items-inline">
+              <li>
+                <strong>商品名称</strong>可修改：可修改商品名称。
+              </li>
+              <li>
+                <strong>商品描述</strong>可修改：可修改商品描述。
+              </li>
+              <li>
+                <strong>品类</strong>可修改：自行划分品类；在「我的店铺」中，商品按您编写的品类陈列。
+              </li>
+              <li>
+                <strong>标签</strong>可修改：便于消费者按特征检索，类似 tag / #；可为商品自定义标签。
+              </li>
+              <li>
+                <strong>价格</strong>系统默认：系统默认价格，不可修改。
+              </li>
+            </ul>
+            <ul class="steps">
+              <li><strong>上架</strong>：保存编辑并上架商品。</li>
+              <li><strong>取消</strong>：放弃编辑，返回选品页面。</li>
+            </ul>
+          </section>
+
+          <section id="product-maintain">
+            <h3>2. 在「我的店铺」中维护商品信息</h3>
+            <p class="lead">可修改商品<strong>标题</strong>、<strong>描述</strong>、<strong>标签</strong>。</p>
+            <div class="grid-3 listing-edit-figures listing-edit-figures--listing product-maintain-figures">
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/我的店铺_编辑产品1.png"
+                    alt="我的店铺：编辑产品"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">
+                      编辑产品。若此栏无图，请将截图放入
+                      <code>assets/images/我的店铺_编辑产品1.png</code> 后刷新。
+                    </p>
+                  </div>
+                </div>
+                <figcaption>编辑产品</figcaption>
+              </figure>
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/我的店铺_编辑品类2.png"
+                    alt="我的店铺：编辑品类"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">
+                      编辑品类。若此栏无图，请将截图放入
+                      <code>assets/images/我的店铺_编辑品类2.png</code> 后刷新。
+                    </p>
+                  </div>
+                </div>
+                <figcaption>编辑品类</figcaption>
+              </figure>
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/我的店铺_编辑标签3.png"
+                    alt="我的店铺：编辑标签"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">
+                      编辑标签。若此栏无图，请将截图放入
+                      <code>assets/images/我的店铺_编辑标签3.png</code> 后刷新。
+                    </p>
+                  </div>
+                </div>
+                <figcaption>编辑标签</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section id="product-delist">
+            <h3>3. 下架商品</h3>
+            <p class="lead">下架有两种进入方式：<strong>选品历史</strong>与<strong>我的店铺</strong>。</p>
+            <div class="grid-2 listing-edit-figures">
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/选品历史.png"
+                    alt="渠道一：选品历史"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">渠道一：选品历史。若此栏无图，请将截图放入 <code>assets/images/选品历史.png</code> 后刷新。</p>
+                  </div>
+                </div>
+                <figcaption>渠道一：选品历史</figcaption>
+              </figure>
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/我的店铺_下架.png"
+                    alt="渠道二：我的店铺"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">渠道二：我的店铺。若此栏无图，请将截图放入 <code>assets/images/我的店铺_下架.png</code> 后刷新。</p>
+                  </div>
+                </div>
+                <figcaption>渠道二：我的店铺</figcaption>
+              </figure>
+            </div>
+            <p class="lead product-delist-steps-intro">
+              通过<strong>选品历史</strong>或<strong>我的店铺</strong>进入商品详情页后：先点击「<strong>下架</strong>」，在「您确定要下架这件商品吗？」弹窗中点击「<strong>确定</strong>」，即完成下架。下图左为操作示意，右为「下架成功」提示。
+            </p>
+            <div class="grid-2 listing-edit-figures product-delist-followup">
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/商品下架.png"
+                    alt="下架详情页面"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">下架详情页面。若此栏无图，请将截图放入 <code>assets/images/商品下架.png</code> 后刷新。</p>
+                  </div>
+                </div>
+                <figcaption>下架详情页面</figcaption>
+              </figure>
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/下架成功.png"
+                    alt="下架成功"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">下架成功。若此栏无图，请将截图放入 <code>assets/images/下架成功.png</code> 后刷新。</p>
+                  </div>
+                </div>
+                <figcaption>下架成功</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section id="product-relist">
+            <h3>4. 已下架商品恢复上架</h3>
+            <div class="grid-2 listing-edit-figures product-relist-figures">
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/选品历史_恢复上架.png"
+                    alt="选品历史：恢复上架"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">
+                      选品历史中恢复上架。若此栏无图，请将截图放入
+                      <code>assets/images/选品历史_恢复上架.png</code> 后刷新。
+                    </p>
+                  </div>
+                </div>
+                <figcaption>选品历史 · 恢复上架</figcaption>
+              </figure>
+              <figure class="figure">
+                <div class="figure-pair__media">
+                  <img
+                    class="figure-pair__img"
+                    src="assets/images/恢复上架_上架.png"
+                    alt="恢复上架：确认上架"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="figure-pair__text" hidden>
+                    <p class="figure-pair__note">
+                      恢复上架操作。若此栏无图，请将截图放入
+                      <code>assets/images/恢复上架_上架.png</code> 后刷新。
+                    </p>
+                  </div>
+                </div>
+                <figcaption>确认上架</figcaption>
+              </figure>
+            </div>
+            <p class="lead">在<strong>「上架记录」</strong>中对已下架商品选择重新<strong>「上架」</strong>。</p>
+          </section>
+        </section>
+
+        <!-- 注意事项 -->
+        <section id="notes">
+          <h2>注意事项</h2>
+          <ul class="steps">
+            <li>选择类目并点击「确定」后，需点击<strong>「筛选」</strong>刷新页面。</li>
+            <li><strong>提交本轮选品</strong>后不可再修改，请在确认无误后提交。</li>
+            <li>
+              关注<strong>余额</strong>与上架成本（每件上架扣
+              <span data-manual-value="balancePerListing">50</span>
+              点），合理安排上架数量。
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <a class="back-top" href="#top" title="回到顶部" aria-label="回到顶部">↑</a>
+    <script src="assets/js/manual-config.js"></script>
+    <script src="assets/js/manual-apply-variant.js"></script>
+    <script src="assets/js/manual-init.js"></script>
+  </body>
+</html>
