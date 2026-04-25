@@ -1,0 +1,9 @@
+在终端里进入仓库的 code 目录后执行（把路径换成你本机上的 code 路径）：
+
+python3 participant_evaluation/participant_evaluation_runner.py --config participant_evaluation/研究助理使用/1_先改这里_配置.xlsx
+
+若你当前终端已经在 participant_evaluation 文件夹里，也可以：
+
+python3 participant_evaluation_runner.py --config 研究助理使用/1_先改这里_配置.xlsx
+
+运行前请先改好同目录下的 1_先改这里_配置.xlsx。

@@ -1,0 +1,38 @@
+Merge Summary
+============================================================
+生成时间: 2026-04-25 14:22:33
+
+[模式] 单组输出（仅 Combined(20260411_OnlyAI&Control)）
+源文件数: 30，排除后待写出: 9
+未写出文件数: 21
+  未写出(排除规则): clickhouse/article_visits.csv
+  未写出(排除规则): clickhouse/chat_like.csv
+  未写出(排除规则): clickhouse/chat_messages.csv
+  未写出(排除规则): clickhouse/chat_read_status.csv
+  未写出(排除规则): clickhouse/chat_sessions.csv
+  未写出(排除规则): clickhouse/filter_use.csv
+  未写出(排除规则): clickhouse/product_compare.csv
+  未写出(排除规则): clickhouse/product_publish.csv
+  未写出(排除规则): clickhouse/product_visits.csv
+  未写出(排除规则): mysql/users.csv
+  未写出(排除规则): mysql/users_article.csv
+  未写出(排除规则): mysql/users_category.csv
+  未写出(排除规则): mysql/users_categorylevelrelationship.csv
+  未写出(排除规则): mysql/users_config.csv
+  未写出(排除规则): mysql/users_instruction.csv
+  未写出(排除规则): mysql/users_marketdata.csv
+  未写出(排除规则): mysql/users_product.csv
+  未写出(排除规则): mysql/users_productdata.csv
+  未写出(排除规则): mysql/users_questionnaire.csv
+  未写出(排除规则): mysql/users_shopitem.csv
+  未写出(排除规则): mysql/users_topproductdata.csv
+  已写出: clickhouse/questionnaire_results.csv -> questionnaire_results.csv
+  已写出: clickhouse/user_operation_log.csv -> user_operation_log.csv
+  已写出: credamo/Post_task_ai_20260411.csv -> Post_task_ai_20260411.csv
+  已写出: credamo/Post_task_c_20260411.csv -> Post_task_c_20260411.csv
+  已写出: credamo/Pre_task_20260411.csv -> Pre_task_20260411.csv
+  已写出: mysql/users_feedback.csv -> users_feedback.csv
+  已写出: mysql/users_shop.csv -> users_shop.csv
+  已写出: operation/临时账号使用.csv -> 临时账号使用.csv
+  已写出: operation/实验不合格样本记录.csv -> 实验不合格样本记录.csv
+是否有合并: 否（仅单组复制）

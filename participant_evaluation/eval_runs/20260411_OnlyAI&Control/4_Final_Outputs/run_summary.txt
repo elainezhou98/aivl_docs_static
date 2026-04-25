@@ -1,0 +1,21 @@
+Participant Evaluation 运行完成
+============================================================
+配置文件: /Users/elaine_pro/Dropbox/Research Projects/1_AIVL_2025/AIVL_Sharing/Experiment materials/code/participant_evaluation/participant_evaluation_config.xlsx
+导出目录: /Users/elaine_pro/Dropbox/Research Projects/1_AIVL_2025/AIVL_Sharing/Experiment materials/code/participant_evaluation/data/20260411_OnlyAI&Control
+项目输出目录: /Users/elaine_pro/Dropbox/Research Projects/1_AIVL_2025/AIVL_Sharing/Experiment materials/code/participant_evaluation/eval_runs/20260411_OnlyAI&Control
+产品匹配文件: /Users/elaine_pro/Dropbox/Research Projects/1_AIVL_2025/AIVL_Sharing/Experiment materials/code/participant_evaluation/eval_runs/20260411_OnlyAI&Control/0_Data_for_match/unique_2024-31-40_merged.csv
+启用规则: [1, 2, 3, 4, 5, 6]
+连续3轮同品是否剔除: 否
+pre rounds: [1, 2]
+是否生成图: 是
+规则5 credemo 是否检查 post 问卷: 否（仅 pre）
+
+关键输出：
+- filtered_feedback: /Users/elaine_pro/Dropbox/Research Projects/1_AIVL_2025/AIVL_Sharing/Experiment materials/code/participant_evaluation/eval_runs/20260411_OnlyAI&Control/4_Final_Outputs/users_feedback.csv
+- feedback_detail: /Users/elaine_pro/Dropbox/Research Projects/1_AIVL_2025/AIVL_Sharing/Experiment materials/code/participant_evaluation/eval_runs/20260411_OnlyAI&Control/4_Final_Outputs/2_feedback_detail.csv
+- user_round_score: /Users/elaine_pro/Dropbox/Research Projects/1_AIVL_2025/AIVL_Sharing/Experiment materials/code/participant_evaluation/eval_runs/20260411_OnlyAI&Control/4_Final_Outputs/user_round_performance_score.csv
+- user_cumulative_score: /Users/elaine_pro/Dropbox/Research Projects/1_AIVL_2025/AIVL_Sharing/Experiment materials/code/participant_evaluation/eval_runs/20260411_OnlyAI&Control/4_Final_Outputs/user_cumulative_performance_summary.csv
+- final_valid_usernames: /Users/elaine_pro/Dropbox/Research Projects/1_AIVL_2025/AIVL_Sharing/Experiment materials/code/participant_evaluation/eval_runs/20260411_OnlyAI&Control/4_Final_Outputs/final_valid_usernames.csv
+- manual_review_queue: /Users/elaine_pro/Dropbox/Research Projects/1_AIVL_2025/AIVL_Sharing/Experiment materials/code/participant_evaluation/eval_runs/20260411_OnlyAI&Control/4_Final_Outputs/manual_review_queue.csv
+- final_user_round_score: /Users/elaine_pro/Dropbox/Research Projects/1_AIVL_2025/AIVL_Sharing/Experiment materials/code/participant_evaluation/eval_runs/20260411_OnlyAI&Control/4_Final_Outputs/user_round_performance_score_final.csv
+- final_user_cumulative_score: /Users/elaine_pro/Dropbox/Research Projects/1_AIVL_2025/AIVL_Sharing/Experiment materials/code/participant_evaluation/eval_runs/20260411_OnlyAI&Control/4_Final_Outputs/user_cumulative_performance_summary_final.csv

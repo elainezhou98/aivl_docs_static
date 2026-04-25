@@ -1,0 +1,55 @@
+研究助理只需要看这个文件夹里的主要文件（配置 + 终端运行命令，见 2_运行说明.txt）。
+
+步骤 1：
+打开 “1_先改这里_配置.xlsx”
+
+步骤 2：
+改「导出」和「输出」两行：
+- export_folder：放平台原始导出的文件夹（例如 ../data/批次名）
+- output_project_dir：评估结果整包输出（例如 ../eval_runs/批次名，与第 1 行批次名保持一致即可）
+
+例如本批 4/11（下一批 4/25 把两行的 20260411 都改成 20260425）：
+- export_folder：../data/20260411_OnlyAI&Control
+- output_project_dir：../eval_runs/20260411_OnlyAI&Control
+
+若负责人要求「导出与输出同一文件夹」，两行可填同一路径；程序会避免嵌套拷贝。
+
+这个配置表现在有 4 行：
+- 第 1 行：export_folder，每次新批次都要改
+- 第 2 行：output_project_dir，通常填 ../eval_runs/同批次名（或与第 1 行相同路径）
+- 第 3 行：产品匹配文件，通常不用改
+- 第 4 行：credemo_check_post（规则 5）。默认 FALSE = 只核对 pre 问卷学号；若需要同时核对 post 问卷，改为 TRUE
+
+如果没有特别通知，除第 1、2 行外的其它行不要改。
+
+步骤 3：
+在终端运行（见同文件夹 “2_运行说明.txt” 里的完整命令）。需要先进入仓库的 code 目录，再执行 python3 …participant_evaluation_runner.py…
+
+步骤 4：
+运行完成后，在配置里 output_project_dir 对应的文件夹下打开 4_Final_Outputs。也可在 code 目录执行：python3 participant_evaluation/print_final_outputs_dir.py participant_evaluation/研究助理使用/1_先改这里_配置.xlsx --open
+
+步骤 5：
+先看 `manual_review_queue.csv`
+
+这个文件是“人工复核名单”：
+- 里面会列出需要手工核对的人
+- 重点包括：规则3预警、规则5预警、规则6店铺信息未修改
+- `reviewer_decision` 这一列可填写：`保留` 或 `剔除`
+- `reviewer_note` 可以写备注
+
+填完以后，再按步骤 3 用终端运行一次。
+
+最重要的结果文件：
+- manual_review_queue.csv
+- final_valid_usernames.csv
+- user_cumulative_performance_summary_final.csv
+- user_round_performance_score_final.csv
+
+说明：
+- `manual_review_queue.csv` = 先人工复核、再决定最终名单
+- 带 final 的文件 = 最终名单版结果
+- 不带 final 的文件 = 全量用户结果
+
+如果运行失败：
+- 不要自己改代码
+- 直接把报错截图发给负责人

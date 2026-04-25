@@ -1,0 +1,5 @@
+key,value,description
+export_folder,../data/20260425_OnlyAI&Control,每次改这里：本次导出文件夹（相对本配置所在文件夹）
+output_project_dir,../eval_runs/20260425_OnlyAI&Control,评估结果输出（相对本配置；整包在 participant_evaluation/eval_runs/批次名）
+product_match_file,../unique_2024-31-40_merged.csv,产品匹配文件（通常不用改）
+credemo_check_post,FALSE,规则5：是否同时检查 post 问卷（TRUE=检查 pre+post；FALSE=仅检查 pre）
